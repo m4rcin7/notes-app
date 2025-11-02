@@ -43,6 +43,8 @@ export default function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
 
+          {error && <p className="text-red-500 text-sm pb-1">{error}</p>}
+
           <button
             type="submit"
             className="w-full py-3 mt-2 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-semibold hover:opacity-90 hover:-translate-y-0.5 transition"
