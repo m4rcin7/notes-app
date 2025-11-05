@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
-import { PasswordInput } from "../../components/Input/PasswordInput";
+import PasswordInput from "../../components/Input/PasswordInput";
 import { validateEmail } from "../../utils/helper";
 
 export default function SignUp() {
@@ -65,7 +65,7 @@ export default function SignUp() {
 
             <button
               type="submit"
-              className="w-full py-3 mt-2 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-semibold hover:opacity-90 hover:-translate-y-0.5 transition"
+              className="w-full py-3 mt-2 rounded-xl bg-gradient-to-red from-cyan-400 to-blue-500 text-black font-semibold hover:opacity-90 hover:-translate-y-0.5 transition"
             >
               SignUp
             </button>
