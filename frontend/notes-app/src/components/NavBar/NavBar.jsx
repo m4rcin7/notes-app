@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
 import ProfileInfo from "../Cards/ProfileInfo";
+import { useState } from "react";
 
 export default function NavBar() {
   const [searchQuery, setSearchQuery] = useState("");
