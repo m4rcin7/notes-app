@@ -1,5 +1,6 @@
 import NoteCard from "../../components/Cards/NoteCard";
 import NavBar from "../../components/NavBar/NavBar";
+import AddEditNotes from "./AddEditNotes";
 
 export default function Home() {
   return (
@@ -18,48 +19,14 @@ export default function Home() {
             onDelete={() => {}}
             onPinNote={() => {}}
           />
-          <NoteCard
-            title="task title"
-            date="task date"
-            content="task content"
-            tags="#task tags"
-            isPinned={true}
-            onEdit={() => {}}
-            onDelete={() => {}}
-            onPinNote={() => {}}
-          />
-          <NoteCard
-            title="task title"
-            date="task date"
-            content="task content"
-            tags="#task tags"
-            isPinned={true}
-            onEdit={() => {}}
-            onDelete={() => {}}
-            onPinNote={() => {}}
-          />
-          <NoteCard
-            title="task title"
-            date="task date"
-            content="task content"
-            tags="#task tags"
-            isPinned={true}
-            onEdit={() => {}}
-            onDelete={() => {}}
-            onPinNote={() => {}}
-          />
-          <NoteCard
-            title="task title"
-            date="task date"
-            content="task content"
-            tags="#task tags"
-            isPinned={true}
-            onEdit={() => {}}
-            onDelete={() => {}}
-            onPinNote={() => {}}
-          />
         </div>
       </div>
+
+      <button className="w-16 h-16 flex items-center justify-center rounded-2xl">
+        <span className="text-[32px]">+</span>
+      </button>
+
+      <AddEditNotes />
     </>
   );
 }
