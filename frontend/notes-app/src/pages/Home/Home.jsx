@@ -1,8 +1,16 @@
+import { useState } from "react";
 import NoteCard from "../../components/Cards/NoteCard";
 import NavBar from "../../components/NavBar/NavBar";
 import AddEditNotes from "./AddEditNotes";
+import Modal from "react-modal";
 
 export default function Home() {
+  const [openAddEditModal, setOpenAddEditModal] = useState({
+    isShown: false,
+    type: "add",
+    data: null,
+  });
+
   return (
     <>
       <NavBar />
@@ -26,7 +34,15 @@ export default function Home() {
         <span className="text-[32px]">+</span>
       </button>
 
-      <AddEditNotes />
+      <Modal
+        isOpen={openAddEditModal.isShown}
+        onRequestClose={() => {}}
+        style={{ overlay: { background: "rgba(0,0,0,0.2" } }}
+        contentLabel=""
+        className=""
+      >
+        <AddEditNotes />{" "}
+      </Modal>
     </>
   );
 }

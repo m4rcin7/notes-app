@@ -45,7 +45,7 @@ export default function Login() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          
+
           <PasswordInput
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -55,7 +55,7 @@ export default function Login() {
 
           <button
             type="submit"
-            className="w-full py-3 mt-2 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-semibold hover:opacity-90 hover:-translate-y-0.5 transition"
+            className="text-slate-100 w-full py-3 mt-2 rounded-xl bg-gradient-to-red from-cyan-400 to-blue-500 font-semibold hover:opacity-90 hover:-translate-y-0.5 transition"
           >
             Login
           </button>
