@@ -1,30 +1,37 @@
 export default function AddEditNotes() {
   return (
-    <div>
+    <div className="p-6 rounded-2xl border border-slate-200 shadow-sm bg-white w-[380px] space-y-5">
       <div className="flex flex-col gap-2">
-        <label className="">Title</label>
+        <label className="text-sm font-medium text-slate-600">Title</label>
         <input
           type="text"
-          className="text-2xl text-slate-950 outline-none"
+          className="text-lg rounded-xl border border-slate-300 p-3 text-slate-900 focus:border-slate-500 focus:ring-2 focus:ring-slate-400 outline-none transition"
           placeholder="Wake up at 5 o'clock"
         />
       </div>
 
-      <div className="flex flex-col gap-2 mt-4">
-        <label className="">Content</label>
-        <input
-          type="text"
-          className="text-sm text-slate-950 outline-none rounded-2xl"
-          placeholder="Content"
-          rows={10}
+      <div className="flex flex-col gap-2">
+        <label className="text-sm font-medium text-slate-600">Content</label>
+        <textarea
+          className="rounded-xl border border-slate-300 p-3 text-slate-900 focus:border-slate-500 focus:ring-2 focus:ring-slate-400 outline-none transition resize-none"
+          placeholder="Write your note here..."
+          rows={5}
         />
       </div>
 
-      <div className="mt-3">
-        <label className="">Tags</label>
+      <div className="flex flex-col gap-2">
+        <label className="text-sm font-medium text-slate-600">Tags</label>
+        <input
+          type="text"
+          className="rounded-xl border border-slate-300 p-3 text-slate-900 focus:border-slate-500 focus:ring-2 focus:ring-slate-400 outline-none transition"
+          placeholder="e.g. Morning, Habits"
+        />
       </div>
 
-      <button className="font-medium mt-5 p-3" onClick={() => {}}>
+      <button
+        className="bg-slate-900 text-white font-medium py-3 rounded-xl hover:bg-slate-800 transition"
+        onClick={() => {}}
+      >
         ADD
       </button>
     </div>

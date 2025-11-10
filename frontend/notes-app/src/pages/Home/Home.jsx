@@ -15,13 +15,13 @@ export default function Home() {
     <>
       <NavBar />
 
-      <div className="container mx-auto">
-        <div className="grid grid-cols-3 gap-4 mt-8">
+      <div className="max-w-6xl mx-auto px-4 pt-10 pb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <NoteCard
-            title="task title"
-            date="task date"
-            content="task content"
-            tags="#task tags"
+            title="Task title"
+            date="Task date"
+            content="Task content"
+            tags="#task #tags"
             isPinned={true}
             onEdit={() => {}}
             onDelete={() => {}}
@@ -30,18 +30,23 @@ export default function Home() {
         </div>
       </div>
 
-      <button className="w-16 h-16 flex items-center justify-center rounded-2xl">
-        <span className="text-[32px]">+</span>
+      <button
+        className="fixed bottom-6 right-6 w-14 h-14 flex items-center justify-center bg-slate-900 text-white rounded-full shadow-lg hover:scale-110 transition-transform"
+        onClick={() => {}}
+      >
+        <span className="text-3xl leading-none">+</span>
       </button>
 
       <Modal
         isOpen={openAddEditModal.isShown}
         onRequestClose={() => {}}
-        style={{ overlay: { background: "rgba(0,0,0,0.2" } }}
+        style={{ overlay: { background: "rgba(0,0,0,0.2)" } }}
         contentLabel=""
-        className=""
+        className="outline-none"
       >
-        <AddEditNotes />{" "}
+        <div className="flex justify-center items-center min-h-screen p-4">
+          <AddEditNotes />
+        </div>
       </Modal>
     </>
   );
