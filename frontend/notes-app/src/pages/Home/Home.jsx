@@ -32,7 +32,9 @@ export default function Home() {
 
       <button
         className="fixed bottom-6 right-6 w-14 h-14 flex items-center justify-center bg-slate-900 text-white rounded-full shadow-lg hover:scale-110 transition-transform"
-        onClick={() => {}}
+        onClick={() => {
+          setOpenAddEditModal({ isShown: true, type: "add", data: null });
+        }}
       >
         <span className="text-3xl leading-none">+</span>
       </button>
