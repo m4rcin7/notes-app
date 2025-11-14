@@ -1,3 +1,5 @@
+import TagInput from "../../components/Input/TagInput";
+
 export default function AddEditNotes() {
   return (
     <div className="p-6 rounded-2xl border border-slate-200 shadow-sm bg-white w-[380px] space-y-5">
@@ -21,11 +23,7 @@ export default function AddEditNotes() {
 
       <div className="flex flex-col gap-2">
         <label className="text-sm font-medium text-slate-600">Tags</label>
-        <input
-          type="text"
-          className="rounded-xl border border-slate-300 p-3 text-slate-900 focus:border-slate-500 focus:ring-2 focus:ring-slate-400 outline-none transition"
-          placeholder="e.g. Morning, Habits"
-        />
+        <TagInput />
       </div>
 
       <button
