@@ -47,7 +47,11 @@ export default function Home() {
         className="outline-none"
       >
         <div className="flex justify-center items-center min-h-screen p-4">
-          <AddEditNotes />
+          <AddEditNotes
+            onClose={() => {
+              setOpenAddEditModal();
+            }}
+          />
         </div>
       </Modal>
     </>
